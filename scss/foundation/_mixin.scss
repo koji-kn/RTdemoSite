@@ -1,0 +1,27 @@
+@mixin breakpoint($point){
+    @if $point==mobile{
+        @media (max-width: 768px){
+            @content ;
+        }
+    }
+
+    
+    @if $point==tabret{
+        @media (min-width: 769px){
+            @content ;
+        }
+    }
+
+
+    @if $point==pc{
+        @media (min-width: 1199px){
+            @content ;
+        }
+    }
+
+    @if $point==pc_l{
+        @media (min-width: 1249px){
+            @content ;
+        }
+    }
+}
