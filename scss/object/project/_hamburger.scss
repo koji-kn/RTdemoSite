@@ -1,0 +1,76 @@
+@use"../../foundation/mixin";
+@use"../../foundation/variables";
+@use "sass:math";
+
+$btnWidth: 23px;
+$btnHeight: 2px;
+
+.p-hamburger{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    
+    @include mixin.breakpoint(pc){
+        display: none;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &::before,
+    &::after{
+        content: "";
+        width: $btnWidth;
+        height: $btnHeight;
+        background: $color__btn;
+        position: absolute;
+        left: calc( 50% - math.div( #{$btnWidth}, 2));
+        display: block;
+        transition: transform 0.2s;
+    }
+
+    &::before{
+        top: 16px;
+    }
+
+    &::after{
+        top: 34px;
+    }
+
+     > span{
+        width: $btnWidth;
+        height: $btnHeight;
+        font-size: 0;
+        background: linear-gradient( to right, $color__btn, $color__btn) repeat-x $color__btn;
+        background-size: auto $btnHeight;
+        position: absolute;
+        left: calc( 50% - math.div( #{$btnWidth}, 2));
+        top: 50%;
+        transition: transform 0.2s;
+    }
+
+    &.is-open{
+        background-color: $color__btn;
+
+        &::before{
+            transform: rotate( 45deg);
+            background: $color__white;
+            top: 23px;
+        }
+
+        &::after{
+            transform: rotate( -45deg);
+            background: $color__white;
+            top: 23px;
+        }
+
+        > span {
+            background: none;
+        }
+    }
+}

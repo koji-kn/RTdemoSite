@@ -1,0 +1,50 @@
+@use"../foundation/variables";
+@use"../foundation/mixin";
+
+.l-header{
+    height: 50px;
+
+    @include mixin.breakpoint(pc){
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    &__title{
+        display: flex;
+    }
+
+    &__logo{
+        width: auto;
+        height: 50px;
+        padding: 10px;
+
+        @include mixin.breakpoint(pc){
+            width: 190px;
+            height: auto;
+            padding: 19px 15px 15px 20px;
+        }
+    }
+
+    &__description{
+        display: none;
+        margin-top: 18px;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-weight: 1000;
+       
+        @include mixin.breakpoint(pc_l){
+            display: block;
+        }
+
+        span{
+            font-size: 1.8rem;
+        }
+
+        &__link{  
+            @include mixin.breakpoint(pc){
+                display: flex;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@use"../../foundation/variables";
+
+
+.c-btn{
+    background: $color__btn;
+    color: $color__white;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+}

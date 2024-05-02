@@ -1,5 +1,14 @@
 @charset"utf-8";
 
-//foundation
-@forward"foundation/reset";
-@forward"foundation/base";
+//base
+@import"../scss/foundation/reset";
+@import"../scss/foundation/base";
+@import"../scss/layout/header";
+
+
+//ハンバーガーボタン
+@import"./object/project/hamburger";
+//ヘッダーメニュー
+@import"./object/project/menu";
+//ボタン
+@import"./object/component/button";
