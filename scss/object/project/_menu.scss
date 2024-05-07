@@ -24,11 +24,13 @@
         display: block;
         position: relative;
         background: $color__white;
+        transition: background-color 0.3s ease;
         z-index: 1000;
         
         @include mixin.breakpoint(pc){
             line-height: 70px;
             padding: 0 15px;
+            transition: unset;
         }
 
         &__last{
@@ -39,7 +41,7 @@
     }
 
     &__contents:hover{
-        background: $color__sublist;
+        background: $color__hover__mobile;
         
         @include mixin.breakpoint(pc){
             background: $color__hover;
@@ -140,11 +142,13 @@
         }
 
         > a:hover{
-            background: $color__sublist;
+            background: $color__hover__mobile;
+            transition: background-color 0.3s ease;
             
             @include mixin.breakpoint(pc){
                 color: $color__btn;
                 background: $color__white;
+                transition: unset;
             }
  
         }

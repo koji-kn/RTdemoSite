@@ -1,11 +1,4 @@
-@mixin breakpoint($point){
-    @if $point==mobile{
-        @media (max-width: 768px){
-            @content ;
-        }
-    }
-
-    
+@mixin breakpoint($point){   
     @if $point==tabret{
         @media (min-width: 769px){
             @content ;

@@ -30,4 +30,38 @@ $(function() {
     );
 });
 
+// パララックス
+$(window).on('scroll', function() {
+    const scrollPosition = $(this).scrollTop();
+    $('.parallax').css('transform', 'translateY(' + scrollPosition * 0.2 + 'px)');
+    
+});  
+
+//レスポンシブ時にメニュー表示
+
+const mediaQueryList = window.matchMedia('(min-width: 1199px)');
+const gmenu = document.querySelector(".p-gmenu");
+    
+/**
+ * イベントリスナー
+ */
+const listener = (event) => {
+  // リサイズ時に行う処理
+  if (event.matches) {
+    // 1199px以上
+    gmenu.style.display = 'block';
+  } else {
+    // 1199px未満
+    gmenu.style.display = 'none';
+  }
+};
+
+// リスナー登録
+// mediaQueryList.addListener(listener); // @deprecated
+mediaQueryList.addEventListener("change", listener);
+
+// 初期化処理
+listener(mediaQueryList);
+     
+
 }
