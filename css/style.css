@@ -574,6 +574,74 @@ a:hover {
   }
 }
 
+.l-recommend {
+  padding: 64px 0;
+  background: black;
+  position: relative;
+  z-index: 1000;
+}
+.l-recommend h3, .l-recommend p {
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 769px) {
+  .l-recommendation {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: -263px auto 0;
+    max-width: 1000px;
+  }
+}
+.l-recommendation__entry {
+  margin-bottom: 40px;
+}
+@media (min-width: 769px) {
+  .l-recommendation__entry {
+    margin: 0 auto;
+  }
+}
+.l-recommendation__title > h3 {
+  font-size: 2.4rem;
+  margin-top: 4px;
+}
+.l-recommendation__description > p {
+  margin-top: 8px;
+}
+@media (min-width: 769px) {
+  .l-recommendation__description > p {
+    display: block;
+    width: 230px;
+    text-align: left;
+  }
+}
+.l-recommendation__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 230px;
+  border: 4px solid #000;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 100px;
+}
+.l-recommendation__icon > i {
+  color: #000;
+}
+
+.l-footer {
+  text-align: center;
+  padding: 15px 0 20px;
+  background-color: #131D34;
+}
+.l-footer__logo {
+  width: 160px;
+  margin: 0 auto;
+}
+
 .p-hamburger {
   display: block;
   width: 50px;
@@ -646,6 +714,9 @@ a:hover {
   .p-gmenu__list {
     display: flex;
   }
+}
+.p-gmenu__list:hover {
+  cursor: pointer;
 }
 .p-gmenu__contents {
   line-height: 48px;

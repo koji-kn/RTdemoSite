@@ -14,10 +14,14 @@
         @include mixin.breakpoint(pc){
             display: flex;
         }
+
+        &:hover{
+            cursor: pointer;
+        }
  
     }
- 
 
+ 
     &__contents{
         line-height: 48px;
         padding: 0 10px;

@@ -1,0 +1,68 @@
+@use "../foundation/mixin";
+@use "../foundation/variables";
+
+
+.l-recommend{
+    padding: 64px 0;
+    background: black;
+    position: relative;
+    z-index: 1000;
+
+    h3, p{
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.l-recommendation{
+
+    @include mixin.breakpoint(tabret){
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: -263px auto 0;
+        max-width: 1000px;
+    }
+
+    &__entry{
+        margin-bottom: 40px;
+
+        @include mixin.breakpoint(tabret){
+            margin: 0 auto;
+        }
+    }
+
+    &__title > h3{
+        font-size: 2.4rem;
+        margin-top: 4px;
+    }
+
+    &__description > p{
+        margin-top: 8px;
+
+        @include mixin.breakpoint(tabret){
+            display: block;
+            width: 230px;
+            text-align: left;
+        }
+    }
+
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 230px;
+        height: 230px;
+        border: 4px solid #000;
+        margin: 0 auto;
+        border-radius: 50%;
+        background: #fff;
+        font-size: 100px;
+
+        > i{
+            color: #000;
+        }
+
+    }
+
+}

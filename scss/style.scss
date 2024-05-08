@@ -3,8 +3,15 @@
 //base
 @import"../scss/foundation/reset";
 @import"../scss/foundation/base";
+
+//ヘッダー
 @import"../scss/layout/header";
+//メイン画像
 @import"../scss/layout/mainvisual";
+//recommend、アイコン部分
+@import"../scss/layout/section";
+//フッター
+@import"../scss/layout/footer";
 
 
 
