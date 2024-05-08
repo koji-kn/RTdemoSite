@@ -4,6 +4,7 @@
 
 .p-gmenu{
     display: none;
+    max-height: 100vh;
     
     @include mixin.breakpoint(pc){
         display: block;

@@ -578,7 +578,7 @@ a:hover {
   padding: 64px 0;
   background: black;
   position: relative;
-  z-index: 1000;
+  z-index: 999;
 }
 .l-recommend h3, .l-recommend p {
   text-align: center;
@@ -704,6 +704,7 @@ a:hover {
 
 .p-gmenu {
   display: none;
+  max-height: 100vh;
 }
 @media (min-width: 1199px) {
   .p-gmenu {
