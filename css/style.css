@@ -419,6 +419,10 @@ a:hover {
   cursor: pointer;
 }
 
+h3 {
+  font-size: 2.4rem;
+}
+
 .l-header {
   height: 50px;
 }
@@ -603,7 +607,6 @@ a:hover {
   }
 }
 .l-recommendation__title > h3 {
-  font-size: 2.4rem;
   margin-top: 4px;
 }
 .l-recommendation__description > p {

@@ -33,11 +33,10 @@
     }
 
     &__title > h3{
-        font-size: 2.4rem;
         margin-top: 4px;
     }
 
-    &__description > p{
+    &__description  > p{
         margin-top: 8px;
 
         @include mixin.breakpoint(tabret){
